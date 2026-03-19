@@ -36,7 +36,6 @@ RDS MySQL Database
 - EC2
 - Auto Scaling
 - RDS MySQL
-- CloudWatch
 
 ---
 
