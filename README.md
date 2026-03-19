@@ -1,4 +1,4 @@
-# AWS 3-Tier DevOps Project
+# AWS 3-Tier Scalable Inventory Management System using ALB, Auto Scaling & RDS
 
 ## Project Overview
 This project demonstrates a highly available AWS 3-tier architecture used to deploy a scalable web application.
