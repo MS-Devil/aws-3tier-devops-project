@@ -1,52 +1,97 @@
-# AWS 3-Tier Scalable Inventory Management System using ALB, Auto Scaling & RDS
+# AWS 3-Tier Scalable Inventory Management System
 
-## Project Overview
-This project demonstrates a highly available AWS 3-tier architecture used to deploy a scalable web application.
+## 📌 Project Overview
 
-The architecture separates the application into three layers:
+This project demonstrates a **production-like 3-tier architecture on AWS** to deploy a scalable and highly available web application.
 
-1. Presentation Layer
-2. Application Layer
-3. Database Layer
-
-This design improves scalability, security and reliability.
+The application is designed to handle traffic efficiently using **Application Load Balancer and Auto Scaling**, while securely storing data in **Amazon RDS**.
 
 ---
 
-## Architecture
+## 🏗️ Architecture
 
 User
 ↓
-Application Load Balancer
+Application Load Balancer (ALB)
 ↓
-EC2 Instances (Auto Scaling)
+EC2 Instances (Auto Scaling Group)
 ↓
-RDS MySQL Database
+Amazon RDS (MySQL Database)
 
 ---
 
-## AWS Services Used
+## ⚙️ AWS Services Used
 
-- VPC
-- Public Subnets
-- Private Subnets
-- Internet Gateway
-- NAT Gateway
-- Application Load Balancer
-- EC2
-- Auto Scaling
-- RDS MySQL
+* Amazon EC2
+* Application Load Balancer (ALB)
+* Auto Scaling Group (ASG)
+* Amazon RDS (MySQL)
+* VPC (Public & Private Subnets)
+* Internet Gateway & Security Groups
 
 ---
 
-## Project Goal
+## 🚀 How It Works
 
-The goal of this project is to simulate a production-grade infrastructure setup where a web application can handle traffic reliably using load balancing and auto scaling.
+1. User sends request via browser
+2. ALB receives traffic and distributes it across EC2 instances
+3. EC2 instances run the inventory application
+4. Application interacts with RDS database for data storage
+5. Auto Scaling automatically increases/decreases instances based on load
 
 ---
 
-## Future Improvements
+## 🛠️ Deployment Steps (High-Level)
 
-- CI/CD pipeline integration
-- Docker containerization
-- Monitoring with Prometheus and Grafana
+1. Launch EC2 instance and deploy application
+2. Configure security groups and networking
+3. Create RDS MySQL database
+4. Setup Application Load Balancer
+5. Create Target Group and register instances
+6. Configure Auto Scaling Group using Launch Template
+
+---
+
+## 📸 Screenshots
+
+Refer to the `/screenshots` folder for:
+
+* EC2 instance running
+* ALB configuration
+* Target group health checks
+* Auto Scaling setup
+* RDS database
+* Application working in browser
+
+---
+
+## ⚠️ Challenges Faced
+
+* Target group showing unhealthy due to DB connection issues
+* Fixed by ensuring RDS was running and accessible
+* Managed IAM permission issues during Elastic IP operations
+
+---
+
+## 📈 Future Improvements
+
+* CI/CD pipeline using GitHub Actions
+* Docker containerization
+* Kubernetes deployment
+* Monitoring using CloudWatch / Prometheus / Grafana
+
+---
+
+## 🎯 Key Learnings
+
+* Real-world 3-tier architecture design
+* Load balancing and high availability concepts
+* Auto Scaling implementation
+* Debugging production-like issues
+
+---
+
+## 💡 Conclusion
+
+This project simulates a **real-world scalable cloud architecture**, making it a strong foundation for DevOps and Cloud roles.
+
